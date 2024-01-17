@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\Desafio - Dev FullStack - (.Net e ReactJS).props" />
+</Project>
