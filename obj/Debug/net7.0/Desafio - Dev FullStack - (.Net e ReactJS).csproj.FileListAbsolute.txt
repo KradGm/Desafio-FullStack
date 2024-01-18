@@ -80,3 +80,4 @@ C:\Projetos\Desafio - Dev FullStack - (.Net e ReactJS)\bin\Debug\net7.0\Swashbuc
 C:\Projetos\Desafio - Dev FullStack - (.Net e ReactJS)\obj\Debug\net7.0\Desafio - Dev FullStack - (.Net e ReactJS).MvcApplicationPartsAssemblyInfo.cs
 C:\Projetos\Desafio - Dev FullStack - (.Net e ReactJS)\bin\Debug\net7.0\Desafio - Dev FullStack - (.Net e ReactJS).xml
 C:\Projetos\Desafio - Dev FullStack - (.Net e ReactJS)\obj\Debug\net7.0\Desafio - Dev FullStack - (.Net e ReactJS).xml
+C:\Projetos\Desafio - Dev FullStack - (.Net e ReactJS)\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.InMemory.dll

@@ -7,12 +7,26 @@ public class HeroesDbContext:DbContext{
     {
         
     }
-    public DbSet<SuperHero> SuperHeroes{get;set;}  
+    public DbSet<SuperHero> SuperHero{get;set;}
+    public DbSet<SuperHeroDTO> SuperHeroDTO{get;set;}  
     public DbSet<SuperPower> SuperPowers{get;set;}
     public DbSet<HeroSuperPower> HeroSuperPowers{get;set;}
-    protected override void OnModelCreating(ModelBuilder modelBuilder)
+       protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.Entity<HeroSuperPower>()
-            .HasKey(ss => new { ss.HeroId, ss.SuperPowerId});
-    }
+    modelBuilder.Entity<HeroSuperPower>()
+        .HasKey(heroSuperPowerKeys => new { heroSuperPowerKeys.HeroId, heroSuperPowerKeys.SuperPowerId });
+
+    modelBuilder.Entity<SuperPower>()
+        .HasKey(superPowerKey => superPowerKey.PowerId);
+
+    modelBuilder.Entity<SuperHeroDTO>()
+        .HasMany(hero => hero.heroSuperPowers) 
+        .WithOne(heroSuperPower => heroSuperPower.SuperHeroDTO) 
+        .HasForeignKey(heroSuperPower => heroSuperPower.HeroId);
+
+    modelBuilder.Entity<HeroSuperPower>()
+        .HasOne(heroSuperPower => heroSuperPower.SuperHeroDTO) // Correção aqui
+        .WithMany(superHero => superHero.heroSuperPowers)  // Correção aqui
+        .HasForeignKey(heroSuperPower => heroSuperPower.SuperPowerId);
+}
 }

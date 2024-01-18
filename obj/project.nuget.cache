@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "nkWQ3X019QPwJ6NgCXAWRjkRyMJaHwYG+aRuS8x6Lx+RogS6con/q6byxBUebOHFfxU9Idcox7wVtWSf1Feq2g==",
+  "dgSpecHash": "0jLstQ2Ij7hT+UEb7qD3X6nSB95/7DViDTMmhYkHo3/HFglkoIq6NWBtZ2zteCnYcgH6uaNcwwJ2/FjWL/5Buw==",
   "success": true,
   "projectFilePath": "C:\\Projetos\\Desafio - Dev FullStack - (.Net e ReactJS)\\Desafio - Dev FullStack - (.Net e ReactJS).csproj",
   "expectedPackageFiles": [
@@ -15,6 +15,7 @@
     "C:\\Users\\enzol\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\7.0.15\\microsoft.entityframeworkcore.abstractions.7.0.15.nupkg.sha512",
     "C:\\Users\\enzol\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\7.0.15\\microsoft.entityframeworkcore.analyzers.7.0.15.nupkg.sha512",
     "C:\\Users\\enzol\\.nuget\\packages\\microsoft.entityframeworkcore.design\\7.0.15\\microsoft.entityframeworkcore.design.7.0.15.nupkg.sha512",
+    "C:\\Users\\enzol\\.nuget\\packages\\microsoft.entityframeworkcore.inmemory\\7.0.15\\microsoft.entityframeworkcore.inmemory.7.0.15.nupkg.sha512",
     "C:\\Users\\enzol\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\7.0.15\\microsoft.entityframeworkcore.relational.7.0.15.nupkg.sha512",
     "C:\\Users\\enzol\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\7.0.15\\microsoft.entityframeworkcore.sqlserver.7.0.15.nupkg.sha512",
     "C:\\Users\\enzol\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\7.0.15\\microsoft.entityframeworkcore.tools.7.0.15.nupkg.sha512",

@@ -9,6 +9,7 @@
       "Desafio - Dev FullStack - (.Net e ReactJS)/1.0.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "7.0.15",
+          "Microsoft.EntityFrameworkCore.InMemory": "7.0.15",
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.15",
           "Microsoft.EntityFrameworkCore.Tools": "7.0.15",
           "Swashbuckle.AspNetCore": "6.5.0",
@@ -165,6 +166,17 @@
         },
         "runtime": {
           "lib/net6.0/Microsoft.EntityFrameworkCore.Design.dll": {
+            "assemblyVersion": "7.0.15.0",
+            "fileVersion": "7.0.1523.57109"
+          }
+        }
+      },
+      "Microsoft.EntityFrameworkCore.InMemory/7.0.15": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "7.0.15"
+        },
+        "runtime": {
+          "lib/net6.0/Microsoft.EntityFrameworkCore.InMemory.dll": {
             "assemblyVersion": "7.0.15.0",
             "fileVersion": "7.0.1523.57109"
           }
@@ -688,6 +700,13 @@
       "sha512": "sha512-knFwFoPpYqpV09xqZxowqA3Sbxg8cAKmJFuQDl43ZqgtCcMAEnVeH8aBLzSmpggauzC28/MWVtP88N/C+ko4dA==",
       "path": "microsoft.entityframeworkcore.design/7.0.15",
       "hashPath": "microsoft.entityframeworkcore.design.7.0.15.nupkg.sha512"
+    },
+    "Microsoft.EntityFrameworkCore.InMemory/7.0.15": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Hhv53YAEsO7K9nM5/ccn8WwObuYa+niNYTY+77rLMgn648on+zJNct76DQeUnQOKnbn9NaDTunAxQBEmI0mnag==",
+      "path": "microsoft.entityframeworkcore.inmemory/7.0.15",
+      "hashPath": "microsoft.entityframeworkcore.inmemory.7.0.15.nupkg.sha512"
     },
     "Microsoft.EntityFrameworkCore.Relational/7.0.15": {
       "type": "package",

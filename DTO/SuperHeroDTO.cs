@@ -1,11 +1,20 @@
-﻿namespace Desafio___Dev_FullStack____.Net_e_ReactJS_;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace Desafio___Dev_FullStack____.Net_e_ReactJS_;
 
 public class SuperHeroDTO
-{
-    public string Name { get; set; }
+{      
+    [Key]
+    [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+    public long id {get;set;}
+    public string RealName { get; set; }
     public string HeroName { get; set; }
-    public DateTime DateOfBirth { get; set; }
+    [DataType(DataType.Date)]
+    [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
+    public DateTime BirthDate { get; set; }
     public float Height { get; set; }
     public float Weight { get; set; }
-    public List<int> SuperPowerIds { get; set; }
+
+    public List<HeroSuperPower> heroSuperPowers{get;set;}
 }

@@ -4,5 +4,54 @@
         <name>Desafio - Dev FullStack - (.Net e ReactJS)</name>
     </assembly>
     <members>
+        <member name="T:Desafio___Dev_FullStack____.Net_e_ReactJS_.HomeController">
+            <summary>
+            This is the main controller for handling home-related actions.
+            </summary>
+        </member>
+        <member name="T:SuperHeroController">
+            <summary>
+            This is the main controller for handling Heroes-related actions.
+            </summary>
+        </member>
+        <member name="M:SuperHeroController.#ctor(HeroesDbContext)">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:SuperHeroController.Get">
+            <summary>
+            Gets the list of all SuperHeroes.
+            </summary>
+        </member>
+        <member name="M:SuperHeroController.Get(System.Int64)">
+            <summary>
+            Gets a specific SuperHero by ID.
+            </summary>
+            <param name="id">The ID of the SuperHero.</param>
+        </member>
+        <member name="M:SuperHeroController.DeleteHero(System.Int64)">
+            <summary>
+            Deletes a SuperHero by ID.
+            </summary>
+            <param name="id">The ID of the SuperHero to delete.</param>
+        </member>
+        <member name="M:SuperHeroController.PostSuperHero(Desafio___Dev_FullStack____.Net_e_ReactJS_.SuperHeroDTO)">
+            <summary>
+            Creates a new SuperHero.
+            </summary>
+            <param name="superHeroDto">The data for the new SuperHero.</param>
+        </member>
+        <member name="M:SuperHeroController.UpdateHero(Desafio___Dev_FullStack____.Net_e_ReactJS_.SuperHeroDTO)">
+            <summary>
+            Updates an existing SuperHero.
+            </summary>
+            <param name="hero">The updated SuperHero.</param>
+        </member>
+        <member name="M:SuperHeroController.GetSuperPowers">
+            <summary>
+            Gets the list of all SuperPowers.
+            </summary>
+        </member>
     </members>
 </doc>
