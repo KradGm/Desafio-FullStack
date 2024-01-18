@@ -8,6 +8,19 @@
 
 # User-specific files
 .Ruserdata
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Build results
+
+[Dd]ebug/
+[Rr]elease/
+x64/
+[Bb]in/
+[Oo]bj/
 
 # Example code in package build process
 *-Ex.R
