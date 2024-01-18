@@ -7,8 +7,8 @@ namespace Desafio___Dev_FullStack____.Net_e_ReactJS_;
 public class HeroSuperPower
 {   
     
-    [ForeignKey("Hero")]
-    public long HeroId{get;set;}
+    [ForeignKey("SuperHeroDTO")]
+    public long? HeroId{get;set;}
     [ForeignKey("SuperPower")]
     public long SuperPowerId{get;set;}
 

@@ -2,7 +2,7 @@
 
 namespace Desafio___Dev_FullStack____.Net_e_ReactJS_;
 /// <summary>
-/// This is the main controller for handling home-related actions.
+/// Esse é o controlador padrão do MVC.
 /// </summary>
 public class HomeController : Controller
 {

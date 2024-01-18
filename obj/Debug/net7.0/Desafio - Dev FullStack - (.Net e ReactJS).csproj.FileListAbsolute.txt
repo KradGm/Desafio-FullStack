@@ -81,3 +81,6 @@ C:\Projetos\Desafio - Dev FullStack - (.Net e ReactJS)\obj\Debug\net7.0\Desafio 
 C:\Projetos\Desafio - Dev FullStack - (.Net e ReactJS)\bin\Debug\net7.0\Desafio - Dev FullStack - (.Net e ReactJS).xml
 C:\Projetos\Desafio - Dev FullStack - (.Net e ReactJS)\obj\Debug\net7.0\Desafio - Dev FullStack - (.Net e ReactJS).xml
 C:\Projetos\Desafio - Dev FullStack - (.Net e ReactJS)\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.InMemory.dll
+C:\Projetos\Desafio - Dev FullStack - (.Net e ReactJS)\bin\Debug\net7.0\webapp\super-hero-app\package-lock.json
+C:\Projetos\Desafio - Dev FullStack - (.Net e ReactJS)\bin\Debug\net7.0\webapp\super-hero-app\package.json
+C:\Projetos\Desafio - Dev FullStack - (.Net e ReactJS)\bin\Debug\net7.0\webapp\super-hero-app\public\manifest.json

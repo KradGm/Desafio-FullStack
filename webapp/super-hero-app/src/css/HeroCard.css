@@ -1,0 +1,43 @@
+.hero-card {
+    display: grid;
+    grid-template-areas:
+      'heroName'
+      'midHeroInfo'
+      'heroSuperPowers';
+    grid-template-rows: max-content;
+    align-items: flex-start;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    max-height: 600px;
+  }
+  
+  .hero-name {
+    grid-area: heroName;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .mid-hero-info {
+    grid-area: midHeroInfo;
+  }
+  
+  .hero-super-powers {
+    grid-area: heroSuperPowers;
+    padding-bottom: 5rem;
+  }
+  
+  .hero-card p {
+    margin: 2px;
+  }
+  
+  .hero-card h2 {
+    margin: 5px;
+  }
+  
+  .power-card {
+    border: 1px solid #ddd;
+    padding: 5px;
+    margin: 5px;
+  }

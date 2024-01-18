@@ -12,17 +12,25 @@ void Configure(IApplicationBuilder app, IWebHostEnvironment env, IServiceProvide
 {
     using var scope = serviceProvider.GetRequiredService<IServiceScopeFactory>().CreateScope();
     var scopedServices = scope.ServiceProvider;
-    
+
     var superPowerService = scopedServices.GetRequiredService<ISuperPowerService>();
 
     try
     {
-        superPowerService.SeedSuperPowersAsync().Wait();
+        if (!scopedServices.GetRequiredService<HeroesDbContext>().SuperPowers.Any())
+        {
+            superPowerService.SeedSuperPowersAsync().Wait();
+        }
     }
     catch (Exception ex)
     {
         Console.Error.WriteLine($"Erro ao semear superpoderes: {ex.Message}");
     }
+     app.UseCors(builder =>
+        builder.AllowAnyOrigin()
+               .AllowAnyHeader()
+               .AllowAnyMethod()
+     );
 }
 
 builder.Services.AddControllers();

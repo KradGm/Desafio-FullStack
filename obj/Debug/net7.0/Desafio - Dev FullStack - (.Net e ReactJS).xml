@@ -6,51 +6,51 @@
     <members>
         <member name="T:Desafio___Dev_FullStack____.Net_e_ReactJS_.HomeController">
             <summary>
-            This is the main controller for handling home-related actions.
+            Esse é o controlador padrão do MVC.
             </summary>
         </member>
         <member name="T:SuperHeroController">
             <summary>
-            This is the main controller for handling Heroes-related actions.
+            Este é o controlador principal para ações relacionadas a API.
             </summary>
         </member>
         <member name="M:SuperHeroController.#ctor(HeroesDbContext)">
-             <summary>
-            
-             </summary>
-        </member>
-        <member name="M:SuperHeroController.Get">
             <summary>
-            Gets the list of all SuperHeroes.
+            Esse é o controlador de todas as ações na API.
             </summary>
         </member>
-        <member name="M:SuperHeroController.Get(System.Int64)">
+        <member name="M:SuperHeroController.GetAllHeroes">
             <summary>
-            Gets a specific SuperHero by ID.
+            Retorna a lista de todos os herois.
             </summary>
-            <param name="id">The ID of the SuperHero.</param>
+        </member>
+        <member name="M:SuperHeroController.GetHeroById(System.Int64)">
+            <summary>
+            Retorna um heroi pelo id especifico.
+            </summary>
+            <param name="id">Digite o id do heroi.</param>
         </member>
         <member name="M:SuperHeroController.DeleteHero(System.Int64)">
             <summary>
-            Deletes a SuperHero by ID.
+            Deleta um heroi pelo seu Id.
             </summary>
-            <param name="id">The ID of the SuperHero to delete.</param>
+            <param name="id">Digite o Id do heroi a ser deletado.</param>
         </member>
         <member name="M:SuperHeroController.PostSuperHero(Desafio___Dev_FullStack____.Net_e_ReactJS_.SuperHeroDTO)">
             <summary>
-            Creates a new SuperHero.
+            Cria um novo Heroi.
             </summary>
-            <param name="superHeroDto">The data for the new SuperHero.</param>
+            <param name="superHeroDto">Digite os dados do novo heroi, .</param>
         </member>
         <member name="M:SuperHeroController.UpdateHero(Desafio___Dev_FullStack____.Net_e_ReactJS_.SuperHeroDTO)">
             <summary>
-            Updates an existing SuperHero.
+            Atualiza um heroi ja existente pelo ID.
             </summary>
-            <param name="hero">The updated SuperHero.</param>
+            <param name="hero">Heroi atualizado.</param>
         </member>
         <member name="M:SuperHeroController.GetSuperPowers">
             <summary>
-            Gets the list of all SuperPowers.
+            Retorna a lista de todos os poderes no banco de dados.
             </summary>
         </member>
     </members>

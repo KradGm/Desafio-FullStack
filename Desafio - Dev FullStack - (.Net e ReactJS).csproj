@@ -20,4 +20,7 @@
     <!-- Certifique-se de substituir "x.y.z" pela versão do EF Core compatível com .NET 7.0 -->
     <!-- Adicione outras dependências do seu projeto aqui -->
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="webapp\super-hero-app\src\img\" />
+  </ItemGroup>
 </Project>

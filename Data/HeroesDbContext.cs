@@ -25,8 +25,8 @@ public class HeroesDbContext:DbContext{
         .HasForeignKey(heroSuperPower => heroSuperPower.HeroId);
 
     modelBuilder.Entity<HeroSuperPower>()
-        .HasOne(heroSuperPower => heroSuperPower.SuperHeroDTO) // Correção aqui
-        .WithMany(superHero => superHero.heroSuperPowers)  // Correção aqui
-        .HasForeignKey(heroSuperPower => heroSuperPower.SuperPowerId);
+    .HasOne(heroSuperPower => heroSuperPower.SuperHeroDTO)
+    .WithMany(superHero => superHero.heroSuperPowers)
+    .HasForeignKey(heroSuperPower => heroSuperPower.HeroId); 
 }
 }
