@@ -144,7 +144,7 @@ const SuperHeroForm = ({ onSubmit, superPowers }) => {
 
   return (
     <div className='super-hero-form'>
-      <h2>Super Hero Form</h2>
+      <h2>Super Hero Crud!!</h2>
       <form>
         <label>
           Nome Real:

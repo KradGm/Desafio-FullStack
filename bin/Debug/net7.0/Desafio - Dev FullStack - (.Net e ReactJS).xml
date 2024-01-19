@@ -53,5 +53,10 @@
             Retorna a lista de todos os poderes no banco de dados.
             </summary>
         </member>
+        <member name="M:SuperHeroController.GetSuperHeroPower">
+            <summary>
+            Utilizado para testar a interação HeroisSuperPoderes com Herois e SuperPoder
+            </summary>
+        </member>
     </members>
 </doc>
