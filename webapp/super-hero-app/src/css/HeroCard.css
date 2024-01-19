@@ -1,43 +1,74 @@
 .hero-card {
-    display: grid;
-    grid-template-areas:
-      'heroName'
-      'midHeroInfo'
-      'heroSuperPowers';
-    grid-template-rows: max-content;
-    align-items: flex-start;
-    border: 1px solid #ccc;
-    padding: 10px;
-    border-radius: 5px;
-    max-height: 600px;
-  }
-  
-  .hero-name {
-    grid-area: heroName;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .mid-hero-info {
-    grid-area: midHeroInfo;
-  }
-  
-  .hero-super-powers {
-    grid-area: heroSuperPowers;
-    padding-bottom: 5rem;
-  }
-  
-  .hero-card p {
-    margin: 2px;
-  }
-  
-  .hero-card h2 {
-    margin: 5px;
-  }
-  
-  .power-card {
-    border: 1px solid #ddd;
-    padding: 5px;
-    margin: 5px;
-  }
+  display: grid;
+  grid-template-areas:
+    'heroName'
+    'midHeroInfo'
+    'heroSuperPowers';
+  grid-template-rows: max-content;
+  align-items: flex-start;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-height: auto;
+}
+
+.hero-card.editing {
+  border: 2px solid #007bff;
+}
+
+.hero-name {
+  grid-area: heroName;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.edit-buttons {
+  margin: auto;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.mid-hero-info {
+  grid-area: midHeroInfo;
+  margin-bottom: 16px;
+}
+
+button {
+  margin-left: 8px;
+  padding: 8px 16px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.delete-button {
+  background-color: rgb(255, 64, 64);
+}
+
+.hero-super-powers {
+  grid-area: heroSuperPowers;
+  padding-bottom: 1rem;
+}
+
+.hero-card p {
+  margin: 2px;
+}
+
+.hero-card h2 {
+  font-weight: 500;
+}
+
+.power-card {
+  border: 1px solid #ddd;
+  padding: 5px;
+  margin: 5px;
+}

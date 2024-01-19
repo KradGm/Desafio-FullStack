@@ -151,6 +151,9 @@ public class SuperHeroController : ControllerBase
         var superPowers = _context.SuperPowers.ToList();
         return Ok(superPowers);
     }
+    /// <summary>
+    /// Utilizado para testar a interação HeroisSuperPoderes com Herois e SuperPoder
+    /// </summary>
     [HttpGet("SuperHeroPowers")]
     public IActionResult GetSuperHeroPower()
     {

@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  
+
 }
 
 .App-logo {
@@ -24,6 +24,7 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+
 .app-container {
   display: flex;
   flex-direction: column;
@@ -42,7 +43,8 @@
 
 .app-content {
   width: 100%;
-  max-width: 1200px; /* Ajuste o valor conforme necessário */
+  max-width: 1200px;
+  /* Ajuste o valor conforme necessário */
   margin: 0 auto;
 }
 
@@ -54,6 +56,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
