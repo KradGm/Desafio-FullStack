@@ -101,6 +101,9 @@ public class SuperHeroController : ControllerBase
         return Ok(superHero);
     }
 
+    /// <summary>
+    /// Cria uma nova interação entre Heroi e SuperPoder.
+    /// </summary>
     [HttpPost("CreateHeroSuperPower")]
     [ProducesResponseType(200)]
     [ProducesResponseType(409, Type = typeof(string))]

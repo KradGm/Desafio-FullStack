@@ -4,11 +4,6 @@
         <name>Desafio - Dev FullStack - (.Net e ReactJS)</name>
     </assembly>
     <members>
-        <member name="T:Desafio___Dev_FullStack____.Net_e_ReactJS_.HomeController">
-            <summary>
-            Esse é o controlador padrão do MVC.
-            </summary>
-        </member>
         <member name="T:SuperHeroController">
             <summary>
             Este é o controlador principal para ações relacionadas a API.
@@ -42,6 +37,11 @@
             </summary>
             <param name="superHeroDto">Digite os dados do novo heroi, .</param>
         </member>
+        <member name="M:SuperHeroController.CreateHeroSuperPower(System.Int64,System.Int64)">
+            <summary>
+            Cria uma nova interação entre Heroi e SuperPoder.
+            </summary>
+        </member>
         <member name="M:SuperHeroController.UpdateHero(Desafio___Dev_FullStack____.Net_e_ReactJS_.SuperHeroDTO)">
             <summary>
             Atualiza um heroi ja existente pelo ID.
@@ -51,6 +51,11 @@
         <member name="M:SuperHeroController.GetSuperPowers">
             <summary>
             Retorna a lista de todos os poderes no banco de dados.
+            </summary>
+        </member>
+        <member name="M:SuperHeroController.GetSuperHeroPower">
+            <summary>
+            Utilizado para testar a interação HeroisSuperPoderes com Herois e SuperPoder
             </summary>
         </member>
     </members>

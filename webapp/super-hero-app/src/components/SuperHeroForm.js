@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { addHero, fetchHeroes } from '../services/ApiService'; 
 import '../css/SuperHeroForm.css';
 
 const SuperHeroForm = ({ onSubmit, superPowers }) => {
@@ -10,19 +11,17 @@ const SuperHeroForm = ({ onSubmit, superPowers }) => {
     weight: 0,
     heroSuperPowers: [],
   });
-  const API_URL = "http://localhost:5182/";
   const [dateError] = useState('');
   const [tempSuperPoderes, setTempSuperPoderes] = useState([]);
   const [superPower, setSuperPowers] = useState([]);
   const [nameError, setNameError] = useState('');
+  const [heroNameError, setHeroNameError ] = useState('');
   const [heightError, setHeightError] = useState('');
   const [weightError, setWeightError] = useState('');
   const [submitSuccess, setSubmitSuccess] = useState(null);
 
-
   useEffect(() => {
-    fetch(`${API_URL}api/SuperHero/SuperPowers`)
-      .then(response => response.json())
+    fetchHeroes('SuperHero/SuperPowers')
       .then(data => setSuperPowers(data))
       .catch(error => console.error('Erro ao obter superpoderes:', error));
   }, []);
@@ -47,8 +46,6 @@ const SuperHeroForm = ({ onSubmit, superPowers }) => {
       if (parts.length > 2) {
         transformedValue = `${parts[0]}.${parts.slice(1).join('')}`;
       }
-    } else if (name === 'realName' || name === 'heroName') {
-      setNameError(value.trim() === '' ? `Ambos os nomes são obrigatórios.` : '');
     }
 
     setNewHero((prevHero) => ({ ...prevHero, [name]: transformedValue }));
@@ -67,13 +64,12 @@ const SuperHeroForm = ({ onSubmit, superPowers }) => {
     setNewHero((prevHero) => ({ ...prevHero, heroSuperPowers: tempSuperPoderes }));
   };
 
-  const transformFormData = (formData, heroId) => {
+  const transformFormData = (formData) => {
     try {
       const birthDateParts = formData.birthDate.split('/');
       const formattedDate = `${birthDateParts[2]}-${birthDateParts[1]}-${birthDateParts[0]}`;
 
       const heroSuperPowers = tempSuperPoderes.map((powerId) => ({
-        heroId: heroId,
         superPowerId: Number(powerId),
       }));
 
@@ -95,49 +91,33 @@ const SuperHeroForm = ({ onSubmit, superPowers }) => {
     try {
       if (newHero.realName.trim() === '') {
         setNameError('Nome é obrigatório.');
+      
         return;
-      }
+
+      }else setNameError('');
 
       if (newHero.heroName.trim() === '') {
-        setNameError('Nome de Herói é obrigatório.');
+        setHeroNameError('Nome de Herói é obrigatório.');
         return;
-      }
+      }else setHeroNameError('');
 
-      if (newHero.height.trim() === '') {
+      if (newHero.height.trim() === '' || newHero.height === '0' ) {
         setHeightError('Altura é obrigatória.');
         return;
-      }
+      }else setHeightError('');
 
-      if (newHero.weight.trim() === '') {
+      if (newHero.weight.trim() === '' || newHero.weight=== '0') {
         setWeightError('Peso é obrigatório.');
         return;
-      }
+      }else setWeightError('');
 
-      const transformedData = transformFormData(newHero);
 
-      const response = await fetch('http://localhost:5182/api/SuperHero', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(transformedData),
-      });
-
-      console.log(transformedData);
-
-      if (!response.ok) {
-        setSubmitSuccess(false);
-        throw new Error('Erro ao enviar dados ao backend.');
-      }
-
-      const data = await response.json();
-      console.log(data);
+      await addHero('SuperHero', transformFormData(newHero));
 
       setSubmitSuccess(true);
       window.location.reload();
     } catch (error) {
       console.error(error);
-
       setSubmitSuccess(false);
     }
   };
@@ -164,7 +144,7 @@ const SuperHeroForm = ({ onSubmit, superPowers }) => {
             name="heroName"
             value={newHero.heroName}
             onChange={handleInputChange} />
-          {nameError && <span className="error-message">{nameError}</span>}
+          {heroNameError && <span className="error-message">{heroNameError}</span>}
         </label>
         <label>
           Data de Nascimento:
@@ -226,5 +206,4 @@ const SuperHeroForm = ({ onSubmit, superPowers }) => {
     </div>
   );
 };
-
 export default SuperHeroForm;

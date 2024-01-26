@@ -86,3 +86,6 @@ po/*~
 
 # RStudio Connect folder
 rsconnect/
+*.pdb
+*.dll
+*.bin

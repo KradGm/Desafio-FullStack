@@ -1,84 +1,76 @@
 import React, { useState, useEffect } from 'react';
 import SuperHeroForm from './SuperHeroForm';
 import HeroCard from './HeroCard';
+import { fetchHeroes, addHero, updateHero, deleteHero } from '../services/ApiService';
 import '../css/HeroApp.css';
 
 const HeroApp = () => {
-    const [heroes, setHeroes] = useState([]);
-    const [superPowers, setSuperPowers] = useState([]);
-    const API_URL = "http://localhost:5182/";
-    useEffect(() => {
-        const fetchHeroesAndSuperPowers = async () => {
-            const responseHeroes = await fetch(`${API_URL}api/SuperHero`);
-            const dataHeroes = await responseHeroes.json();
-            setHeroes(dataHeroes);
+  const [heroes, setHeroes] = useState([]);
+  const [superPowers, setSuperPowers] = useState([]);
 
-            const responseSuperPowers = await fetch(`${API_URL}api/SuperHero/SuperPowers`);
-            const dataSuperPowers = await responseSuperPowers.json();
-            setSuperPowers(dataSuperPowers);
-        };
+  useEffect(() => {
+    const fetchHeroesAndSuperPowers = async () => {
+      try {
+        const [dataHeroes, dataSuperPowers] = await Promise.all([
+          fetchHeroes('SuperHero'),
+          fetchHeroes('SuperHero/SuperPowers'),
+        ]);
 
-        fetchHeroesAndSuperPowers();
-    }, []);
-
-    const addHero = (hero) => {
-        setHeroes([...heroes, hero]);
+        setHeroes(dataHeroes);
+        setSuperPowers(dataSuperPowers);
+      } catch (error) {
+        console.error('Erro ao obter dados:', error);
+      }
     };
 
-    const updateHero = async (updatedHero) => {
-        try {
-            const response = await fetch(`${API_URL}api/SuperHero/UpdateHero/${updatedHero.id}`, {
-                method: 'PATCH',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(updatedHero),
-            });
+    fetchHeroesAndSuperPowers();
+  }, []);
 
-            if (!response.ok) {
-                throw new Error('Erro ao atualizar herói.');
-            }
+  const addHeroToCards = async (hero) => {
+    try {
+      const data = await addHero('SuperHero', hero);
+      setHeroes((prevHeroes) => [...prevHeroes, data]);
+    } catch (error) {
+      console.error('Erro ao adicionar herói:', error);
+    }
+  };
 
-            setHeroes((prevHeroes) =>
-                prevHeroes.map((hero) => (hero.id === updatedHero.id ? updatedHero : hero))
-            );
-        } catch (error) {
-            console.error('Erro ao atualizar herói:', error);
-        }
-    };
-    const deleteHero = async (heroId) => {
-        try {
-            const response = await fetch(`${API_URL}api/SuperHero/${heroId}`, {
-                method: 'DELETE',
-            });
+  const updateHeroInfo = async (updatedHero) => {
+    try {
+      const data = await updateHero('SuperHero/UpdateHero', updatedHero.id, updatedHero);
+      setHeroes((prevHeroes) =>
+        prevHeroes.map((hero) => (hero.id === updatedHero.id ? data : hero))
+      );
+    } catch (error) {
+      console.error('Erro ao atualizar herói:', error);
+    }
+  };
 
-            if (!response.ok) {
-                throw new Error('Erro ao excluir herói.');
-            }
+  const deleteHeroInfo = async (heroId) => {
+    try {
+      await deleteHero('SuperHero', heroId);
+      setHeroes((prevHeroes) => prevHeroes.filter((hero) => hero.id !== heroId));
+    } catch (error) {
+      console.error('Erro ao excluir herói:', error);
+    }
+  };
 
-            setHeroes((prevHeroes) => prevHeroes.filter((hero) => hero.id !== heroId));
-        } catch (error) {
-            console.error('Erro ao excluir herói:', error);
-        }
-    };
-
-
-    return (
-        <div>
-            <SuperHeroForm addHero={addHero} />
-            <div className='all-hero-cards'>
-                {heroes.map((hero, index) => (
-                    <HeroCard
-                        key={index}
-                        hero={hero}
-                        superPowers={superPowers}
-                        onUpdate={updateHero}
-                        onDelete={deleteHero}
-                    />
-                ))}
-            </div>
-        </div>
-    );
+  return (
+    <div>
+      <SuperHeroForm addHero={addHeroToCards} />
+      <div className='all-hero-cards'>
+        {heroes.map((hero, index) => (
+          <HeroCard
+            key={index}
+            hero={hero}
+            superPowers={superPowers}
+            onUpdate={updateHeroInfo}
+            onDelete={deleteHeroInfo}
+          />
+        ))}
+      </div>
+    </div>
+  );
 };
 
 export default HeroApp;
