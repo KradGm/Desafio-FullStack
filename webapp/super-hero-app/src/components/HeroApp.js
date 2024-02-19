@@ -3,6 +3,7 @@ import SuperHeroForm from './SuperHeroForm';
 import HeroCard from './HeroCard';
 import { fetchHeroes, addHero, updateHero, deleteHero } from '../services/ApiService';
 import '../css/HeroApp.css';
+import BaseDataForm from './BaseDataForm';
 
 const HeroApp = () => {
   const [heroes, setHeroes] = useState([]);

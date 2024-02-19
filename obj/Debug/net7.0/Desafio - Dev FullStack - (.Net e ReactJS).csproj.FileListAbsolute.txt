@@ -12,8 +12,6 @@ C:\Projetos\Desafio - Dev FullStack - (.Net e ReactJS)\obj\Debug\net7.0\Desafio 
 C:\Projetos\Desafio - Dev FullStack - (.Net e ReactJS)\obj\Debug\net7.0\Desafio - Dev FullStack - (.Net e ReactJS).AssemblyInfo.cs
 C:\Projetos\Desafio - Dev FullStack - (.Net e ReactJS)\obj\Debug\net7.0\Desafio - Dev FullStack - (.Net e ReactJS).csproj.CoreCompileInputs.cache
 C:\Projetos\Desafio - Dev FullStack - (.Net e ReactJS)\obj\Debug\net7.0\Desafio - Dev FullStack - (.Net e ReactJS).MvcApplicationPartsAssemblyInfo.cache
-C:\Projetos\Desafio - Dev FullStack - (.Net e ReactJS)\obj\Debug\net7.0\Desafio - Dev FullStack - (.Net e ReactJS).RazorAssemblyInfo.cache
-C:\Projetos\Desafio - Dev FullStack - (.Net e ReactJS)\obj\Debug\net7.0\Desafio - Dev FullStack - (.Net e ReactJS).RazorAssemblyInfo.cs
 C:\Projetos\Desafio - Dev FullStack - (.Net e ReactJS)\obj\Debug\net7.0\staticwebassets\msbuild.Desafio - Dev FullStack - (.Net e ReactJS).Microsoft.AspNetCore.StaticWebAssets.props
 C:\Projetos\Desafio - Dev FullStack - (.Net e ReactJS)\obj\Debug\net7.0\staticwebassets\msbuild.build.Desafio - Dev FullStack - (.Net e ReactJS).props
 C:\Projetos\Desafio - Dev FullStack - (.Net e ReactJS)\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.Desafio - Dev FullStack - (.Net e ReactJS).props
@@ -21,9 +19,7 @@ C:\Projetos\Desafio - Dev FullStack - (.Net e ReactJS)\obj\Debug\net7.0\staticwe
 C:\Projetos\Desafio - Dev FullStack - (.Net e ReactJS)\obj\Debug\net7.0\staticwebassets.pack.json
 C:\Projetos\Desafio - Dev FullStack - (.Net e ReactJS)\obj\Debug\net7.0\staticwebassets.build.json
 C:\Projetos\Desafio - Dev FullStack - (.Net e ReactJS)\obj\Debug\net7.0\staticwebassets.development.json
-C:\Projetos\Desafio - Dev FullStack - (.Net e ReactJS)\obj\Debug\net7.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 C:\Projetos\Desafio - Dev FullStack - (.Net e ReactJS)\obj\Debug\net7.0\scopedcss\bundle\Desafio - Dev FullStack - (.Net e ReactJS).styles.css
-C:\Projetos\Desafio - Dev FullStack - (.Net e ReactJS)\obj\Debug\net7.0\scopedcss\projectbundle\Desafio - Dev FullStack - (.Net e ReactJS).bundle.scp.css
 C:\Projetos\Desafio - Dev FullStack - (.Net e ReactJS)\obj\Debug\net7.0\Desafio - Dev FullStack - (.Net e ReactJS).dll
 C:\Projetos\Desafio - Dev FullStack - (.Net e ReactJS)\obj\Debug\net7.0\refint\Desafio - Dev FullStack - (.Net e ReactJS).dll
 C:\Projetos\Desafio - Dev FullStack - (.Net e ReactJS)\obj\Debug\net7.0\Desafio - Dev FullStack - (.Net e ReactJS).pdb
